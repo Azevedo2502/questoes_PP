@@ -1,0 +1,8 @@
+public class MeuInputStream extends InputStream {
+  private InputStream stream;
+
+  public MeuInputStream(File file, boolean usarBuffer) throws IOException {
+    FileInputStream fis = new FileInputStream(file);
+    this.stream = usarBuffer ? new BufferedInputStream(fis) : fis;
+  }
+}
