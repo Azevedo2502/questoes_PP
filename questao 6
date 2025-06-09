@@ -1,0 +1,17 @@
+6.
+
+class AdaptadorProjetorLG implements Projetor {
+  private ProjetorLG projetorLG;
+
+  public AdaptadorProjetorLG(ProjetorLG projetorLG) {
+    this.projetorLG = projetorLG;
+  }
+
+  public void ligar() {
+    projetorLG.powerOn();
+  }
+
+  public void desligar() {
+    projetorLG.powerOff();
+  }
+}
