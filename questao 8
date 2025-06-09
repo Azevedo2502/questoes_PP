@@ -1,0 +1,18 @@
+class LogChannel implements Canal {
+  private Canal canal;
+
+  public LogChannel(Canal canal) {
+    this.canal = canal;
+  }
+
+  public void enviar(String mensagem) {
+    System.out.println("Enviando: " + mensagem);
+    canal.enviar(mensagem);
+  }
+
+  public String receber() {
+    String mensagem = canal.receber();
+    System.out.println("Recebido: " + mensagem);
+    return mensagem;
+  }
+}
